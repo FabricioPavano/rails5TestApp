@@ -1,8 +1,5 @@
-# config valid only for current version of Capistrano
-lock '3.6.1'
-
-set :application, 'Test App'
-set :repo_url, 'git@example.com:me/my_repo.git'
+set :application, 'myApp'
+set :repo_url, 'git@github.com:FabricioPavano/rails5TestApp.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -24,11 +21,12 @@ set :repo_url, 'git@example.com:me/my_repo.git'
 # set :pty, true
 
 # Default value for :linked_files is []
-# append :linked_files, 'config/database.yml', 'config/secrets.yml'
+append :linked_files, 'config/database.yml', 'config/secrets.yml'
 
 # Default value for linked_dirs is []
-# append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
 
+set :rvm_ruby_version, '2.3.1p112'
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
